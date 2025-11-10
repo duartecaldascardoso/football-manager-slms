@@ -14,7 +14,7 @@ from football_manager.commenting_agent.tools import (
 
 # Commented, this uses the Google Gemini model. Speculated to have around 40b parameters.
 # Not exactly an SLM, but shows a fast and smaller model.
-#llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash-exp")
+# llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash-exp")
 
 # Using Qwen3, this has performance according to the GPU.
 llm = ChatOllama(model="qwen3:8b", temperature=0.3)

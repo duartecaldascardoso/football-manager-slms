@@ -11,9 +11,7 @@ def obtain_current_date() -> str:
     Returns:
         str: Current date and time in the format 'YYYY-MM-DD HH:MM:SS'
     """
-    print(
-        "[TOOL CALL] obtain_current_date() called by Supervisor Agent"
-    )
+    print("[TOOL CALL] obtain_current_date() called by Supervisor Agent")
     return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 

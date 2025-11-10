@@ -42,9 +42,7 @@ def generate_random_idea() -> str:
     Returns:
         str: Textual idea to help the commentator
     """
-    print(
-        "[TOOL CALL] generate_random_idea() called by Commenting Agent"
-    )
+    print("[TOOL CALL] generate_random_idea() called by Commenting Agent")
     ideas = [
         "Discuss the tactical formation changes",
         "Highlight the intensity of the midfield battle",
@@ -69,9 +67,7 @@ def obtain_active_players() -> str:
     Returns:
         str: Textual representation with all active players from both teams
     """
-    print(
-        "[TOOL CALL] obtain_active_players() called by Commenting Agent"
-    )
+    print("[TOOL CALL] obtain_active_players() called by Commenting Agent")
     home_active = [p for p in ACTIVE_PLAYERS["home"] if p not in EXPELLED_PLAYERS]
     away_active = [p for p in ACTIVE_PLAYERS["away"] if p not in EXPELLED_PLAYERS]
     return f"Home Team Active Players: {', '.join(home_active)}\nAway Team Active Players: {', '.join(away_active)}"
@@ -86,9 +82,7 @@ def obtain_expelled_players() -> str:
     Returns:
         str: Textual representation with all expelled players, or a message if none have been expelled
     """
-    print(
-        "[TOOL CALL] obtain_expelled_players() called by Commenting Agent"
-    )
+    print("[TOOL CALL] obtain_expelled_players() called by Commenting Agent")
     if not EXPELLED_PLAYERS:
         return "No players have been expelled yet."
     return f"Expelled Players: {', '.join(EXPELLED_PLAYERS)}"

@@ -12,3 +12,21 @@ dependencies = [
     "langchain-community>=0.4.1",
     "langchain-ollama>=1.0.0",
 ]
+
+[project.optional-dependencies]
+fine-tuning = [
+    "transformers>=4.36.0",
+    "torch>=2.0.0",
+    "accelerate>=0.25.0",
+    "peft>=0.7.0",
+    "datasets>=2.16.0",
+    "scipy>=1.11.0",
+    "sentencepiece>=0.1.99",
+    "protobuf>=3.20.0",
+    "tqdm>=4.65.0",
+]
+
+# bitsandbytes only works on Linux/Windows, not macOS
+fine-tuning-quantization = [
+    "bitsandbytes>=0.41.0; sys_platform != 'darwin'",
+]
